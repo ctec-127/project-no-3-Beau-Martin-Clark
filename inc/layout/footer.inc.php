@@ -1,4 +1,8 @@
 <?php // Filename: footer.inc.php ?>
+
+<!-- this is the footer -->
+
+
 <div class="row">
     <div class="col-lg-12">
         <p class="text-center mt-4"><?php echo '<span class="font-weight-bold">' . $app_name . ' - Version ' . $app_version . "</span><br>" . $app_copyright;?></p>

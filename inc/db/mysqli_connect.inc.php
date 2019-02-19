@@ -1,5 +1,7 @@
 <?php // Filename: mysqli_connect.inc.php
 
+// stores the data necessary to connect to the database (host, username, password, database name)
+
 # Create a new connection to the database
 $host = 'localhost';
 $username = 'root';

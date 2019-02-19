@@ -1,5 +1,7 @@
 <?php // Filename: delete-record.php
 
+// deletes a record
+
 require __DIR__ . "/inc/db/mysqli_connect.inc.php";
 require __DIR__ . "/inc/app/config.inc.php";
 

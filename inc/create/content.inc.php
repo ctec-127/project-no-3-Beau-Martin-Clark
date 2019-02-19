@@ -1,5 +1,7 @@
 <?php // Filename: connect.inc.php
 
+//checks to make sure the page has been fed all the database fields it needs and then inserts them into the database via SQL
+
 require __DIR__ . "/../db/mysqli_connect.inc.php";
 require __DIR__ . "/../functions/functions.inc.php";
 require __DIR__ . "/../app/config.inc.php";

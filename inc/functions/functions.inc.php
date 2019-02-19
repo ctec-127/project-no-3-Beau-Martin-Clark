@@ -1,5 +1,9 @@
 <?php // Filename: function.inc.php
 
+// contains four functions used by other pages: display message, display letter filters, display record table and display error bucket
+
+// displays message from the database if a change or attempted change has been made
+
 function display_message(){
     if (isset($_GET['message'])) {
         $message = $_GET['message'];
@@ -9,6 +13,7 @@ function display_message(){
     }
 }
 
+// displays the letters A-Z to allow their use as a filter, adjusts their appearance based upon selection
 
 function display_letter_filters($filter){  
     echo '<span class="mr-3">Filter by <strong>Last Name</strong></span>';
@@ -26,6 +31,7 @@ function display_letter_filters($filter){
     echo '<a class="text-secondary p-2 mr-2 bg-success text-light border rounded" href="?clearfilter" title="Reset Filter">Reset</a>&nbsp;&nbsp;';
 }
 
+// gets and displays data from the database  
 
 function display_record_table($result){
     echo '<div class="table-responsive">';
@@ -48,6 +54,7 @@ function display_record_table($result){
     echo '</div>';
 }
 
+// displays any errors returned by the database
 
 function display_error_bucket($error_bucket){
     echo '<p>The following errors were deteced:</p>';

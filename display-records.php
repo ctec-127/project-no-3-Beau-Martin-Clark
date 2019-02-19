@@ -1,5 +1,7 @@
 <?php // Filename: display-records.php
 
+// not sure what this page does - get explained
+
 $pageTitle = "Record Management";
 require 'inc/layout/header.inc.php'; 
 ?>

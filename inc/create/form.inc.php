@@ -1,5 +1,7 @@
 <?php // Filename: form.inc.php ?>
 
+<!-- creates and submits a POST form  to PHP_SELF to allow users to input new records -->
+
 <!-- Note the use of sticky fields below -->
 <!-- Note the use of the PHP Ternary operator
 Scroll down the page

@@ -1,5 +1,8 @@
 <?php // Filename: connect.inc.php
 
+// uses the sql connection and function includes and an sql string below to query data from the data base and display it in ascending order 
+// also allows users to set a filter by letter and handles condition of having no records that match the filter
+
 require __DIR__ . "/../db/mysqli_connect.inc.php";
 require __DIR__ . "/../functions/functions.inc.php";
 

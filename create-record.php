@@ -1,4 +1,7 @@
 <?php // Filename: create-record.php
+
+// uses the content and form includes to create a record
+
 $pageTitle = "Create Record";
 require 'inc/layout/header.inc.php'; 
 ?>

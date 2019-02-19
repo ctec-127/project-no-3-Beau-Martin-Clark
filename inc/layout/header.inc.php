@@ -1,4 +1,7 @@
 <?php // Filename: header.inc.php ?>
+
+<!-- this is the header -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
