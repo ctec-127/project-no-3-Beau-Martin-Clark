@@ -45,11 +45,30 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
         $phone = $db->real_escape_string($_POST['phone']);
     }
 
+
+    if (empty($_POST['gpa'])) {
+        array_push($error_bucket,"<p>Please enter a GPA.</p>");
+    } else {
+        $gpa = $db->real_escape_string($_POST['gpa']);
+    }
+
+    if (empty($_POST['financial_aid'])) {
+        array_push($error_bucket,"<p>Please enter whether the student is on financial aid or not.</p>");
+    } else {
+        $financial_aid = $db->real_escape_string($_POST['financial_aid']);
+    }
+
+    if (empty($_POST['degree_program'])) {
+        array_push($error_bucket,"<p>Please select a degree program.</p>");
+    } else {
+        $degree_program = $db->real_escape_string($_POST['degree_program']);
+    }
+
     // If we have no errors than we can try and insert the data
     if (count($error_bucket) == 0) {
         // Time for some SQL
-        $sql = "INSERT INTO $db_table (first_name,last_name,student_id,email,phone) ";
-        $sql .= "VALUES ('$first','$last',$id,'$email','$phone')";
+        $sql = "INSERT INTO $db_table (first_name,last_name,student_id,email,phone,gpa,financial_aid,degree_program) ";
+        $sql .= "VALUES ('$first','$last',$id,'$email','$phone','$gpa','$financial_aid','$degree_program')";
 
         // comment in for debug of SQL
         // echo $sql;
@@ -68,6 +87,9 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
             unset($id);
             unset($email);
             unset($phone);
+            unset($gpa);
+            unset($financial_aid);
+            unset($degree_program);
         }
     } else {
         display_error_bucket($error_bucket);
