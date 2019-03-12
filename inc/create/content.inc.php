@@ -3,7 +3,6 @@
 //checks to make sure the page has been fed all the database fields it needs and then inserts them into the database via SQL
 
 require __DIR__ . "/../db/mysqli_connect.inc.php";
-require __DIR__ . "/../functions/functions.inc.php";
 require __DIR__ . "/../app/config.inc.php";
 
 $error_bucket = [];
@@ -15,9 +14,6 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     if (empty($_POST['first'])) {
         array_push($error_bucket,"<p>A first name is required.</p>");
     } else {
-        # Old way
-        #$first = $_POST['first'];
-        # New way
         $first = $db->real_escape_string($_POST['first']);
     }
     if (empty($_POST['last'])) {
@@ -44,7 +40,6 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
         #$phone = $_POST['phone'];
         $phone = $db->real_escape_string($_POST['phone']);
     }
-
 
     if (empty($_POST['gpa'])) {
         array_push($error_bucket,"<p>Please enter a GPA.</p>");

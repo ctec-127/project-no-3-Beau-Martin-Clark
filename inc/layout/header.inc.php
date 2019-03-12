@@ -1,7 +1,4 @@
 <?php // Filename: header.inc.php ?>
-
-<!-- this is the header -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,5 +11,6 @@
     <title><?php echo $pageTitle; ?></title>
 </head>
 <body>
+<?php require 'inc/functions/functions.inc.php'; ?>
 <?php require 'inc/app/config.inc.php';?> 
-<?php require 'inc/layout/navbar.inc.php';?> 
+<?php require 'inc/layout/navbar.inc.php';?>

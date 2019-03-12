@@ -4,7 +4,6 @@
 // also allows users to set a filter by letter and handles condition of having no records that match the filter
 
 require __DIR__ . "/../db/mysqli_connect.inc.php";
-require __DIR__ . "/../functions/functions.inc.php";
 
 $orderby = 'last_name';
 $filter = '';
